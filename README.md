@@ -8,12 +8,12 @@ Websites:
   <li>Personal</li>
   <li>Projects
      <ul>
-   Recipes  
+     <li>Recipes</li> 
      </ul>
   </li>
   <li>Practice
      <ul>
-      <li>Brief terminal tutorial<li>
+        <li>Brief terminal tutorial</li>
        <li>Table practice with schedules</li>
      </ul>
   </li>
