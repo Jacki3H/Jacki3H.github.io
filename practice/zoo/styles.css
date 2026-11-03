@@ -1,0 +1,40 @@
+body {background-color: rgb(222, 158, 235); }
+
+table,tr,th,td {
+    border:1px black solid;
+    border-collapse: collapse;
+    }       
+header{
+    background-color: #a73ae1;
+    padding: 10px;
+  
+    }
+   
+    button{
+        background-color: #a73ae1;
+        border-radius: 10px;
+        border-color: #a73ae1;
+    }
+   
+    .special_link{
+    text-decoration:none;
+    display: flex;
+    justify-content: space-around;
+    color: #872eb7;
+    background-color:#d18df6;
+    padding: 10px;
+    border-radius: 8%;
+    }
+     .special_link:hover{
+        background-color: #a73ae1;
+        color: #e5c9f3;
+    }
+    #navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-decoration: none;
+        list-style: none;
+        margin:0px;
+        padding:0px;
+    }    
