@@ -7,6 +7,7 @@ table,tr,th,td {
 header{
     background-color: #a73ae1;
     padding: 10px;
+    margin-bottom: 10px;
   
     }
    
@@ -20,7 +21,7 @@ header{
     text-decoration:none;
     display: flex;
     justify-content: space-around;
-    color: #872eb7;
+    color: #7a1aae;
     background-color:#d18df6;
     padding: 10px;
     border-radius: 8%;
@@ -29,12 +30,15 @@ header{
         background-color: #a73ae1;
         color: #e5c9f3;
     }
-    #navigation {
-        display: flex;
+    .navigation_list{
+        list-style:none;
+        margin:0px;
+        padding:0px;
+         display: flex;
         flex-direction: row;
         justify-content: space-around;
         text-decoration: none;
-        list-style: none;
-        margin:0px;
-        padding:0px;
-    }    
+
+    }
+    
+
