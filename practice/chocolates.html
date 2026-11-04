@@ -1,0 +1,269 @@
+ <html>
+    <head>
+        <style>
+            body{
+                background: linear-gradient(135deg, #1a2980, #26d0ce);
+                height: 100vh;
+            }
+            h1{
+                text-align: center;
+                font-family: Tahoma, sans-serif;
+                color: white;
+            }
+            h2{
+                text-align: center;
+                font-family: Tahoma, sans-serif;
+                color: white;
+            }
+            .container {
+              display: grid;
+              width: 80vw;
+              height: 80vh;
+              margin: auto;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+              background-color: Thistle;
+              padding: 10px;
+              border-radius: 20px;
+              border: 8px solid red;
+            }
+            .heart {
+              height: 20vh; /* adjust to control the size */
+              aspect-ratio: 1;
+              --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+              -webkit-mask-box-image: var(--_m);
+                         mask-border: var(--_m);
+              clip-path: polygon(-41% 0,50% 91%, 141% 0);
+              background-color: chocolate;
+              margin: auto;
+            }
+            /* fallback until better support for mask-border */
+            @supports not (-webkit-mask-box-image: var(--_m)) { 
+              .heart {
+                mask:
+                 radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+                 radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+                 conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+              }
+            }
+            #chocolateheart{
+                grid-column-start: 3;
+                grid-row-start:2;
+            }
+            .lilbits{
+                grid-column-start: 1;
+                grid-row-start: 1;
+                display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+            }
+            .mnm{
+                width:10vh;
+                height:10vh;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items:center;
+                font-size: 2em;
+                color: white;
+                margin-bottom:3px;
+            }
+            #mnm1{
+                grid-column-start:1;
+                grid-row-start:1;
+                background-color:#eb4646;
+            }
+            #mnm2{
+                grid-column-start:2;
+                grid-row-start:1;
+                background-color:#eb9946;
+            }
+            #mnm3{
+                grid-column-start:3;
+                grid-row-start:1;
+                background-color:#ebdd46;
+            }
+            #mnm4{
+                grid-column-start:1;
+                grid-row-start:2;
+                background-color:#67eb46;
+            }
+            #mnm5{
+                grid-column-start:2;
+                grid-row-start:2;
+                background-color:#46ebe8;
+            }
+            #mnm6{
+                grid-column-start:3;
+                grid-row-start:2;
+                background-color:#46a1eb;
+            }
+            #mnm7{
+                grid-column-start:1;
+                grid-row-start:3;
+                background-color:#7a46eb;
+            }
+            #mnm8{
+                grid-column-start:2;
+                grid-row-start:3;
+                background-color:#c746eb;
+            }
+            #mnm9{
+                grid-column-start:3;
+                grid-row-start:3;
+                background-color:#f27cdb;
+            }
+            .lollipop {
+  --r: 100px; /* control the size */
+  --c1: #fd99d7;
+  --c2: #4e4cb0;
+
+  height: calc(2* var(--r));
+  aspect-ratio: 1;
+  clip-path: circle();
+  display: flex;
+  grid-column-start:2;
+  grid-row-start:1;
+  margin:auto;
+}
+.lollipop:before,
+.lollipop:after {
+  content: "";
+  flex: 1;
+  --g1:radial-gradient(50% 50%,var(--c1) 99%,#0000) no-repeat;
+  --g2:radial-gradient(50% 50%,var(--c2) 99%,#0000) no-repeat;
+  background: var(--g1) calc(sin(60deg)* var(--r)) calc(var(--r) / -2), var(--g2) calc(var(--r) / 2) calc(sin(-60deg)* var(--r)), var(--g1) 0 calc(-1* var(--r)), var(--g2) calc(var(--r) / -2) calc(sin(-60deg)* var(--r)), var(--g1) calc(sin(-60deg)* var(--r)) calc(var(--r) / -2), var(--g2) calc(-1* var(--r)) 0, var(--g1) calc(sin(-60deg)* var(--r)) calc(var(--r) / 2);
+  background-size: 200%;
+}
+.lollipop:after {
+   rotate: 180deg;
+}
+            .lollipop2 {
+  --r: 100px; /* control the size */
+  --c1: #f2dc7c;
+  --c2: #7cbff2;
+
+  height: calc(2* var(--r));
+  aspect-ratio: 1;
+  clip-path: circle();
+  display: flex;
+  grid-column-start:3;
+  grid-row-start:1;
+  margin:auto;
+}
+.lollipop2:before,
+.lollipop2:after {
+  content: "";
+  flex: 1;
+  --g1:radial-gradient(50% 50%,var(--c1) 99%,#0000) no-repeat;
+  --g2:radial-gradient(50% 50%,var(--c2) 99%,#0000) no-repeat;
+  background: var(--g1) calc(sin(60deg)* var(--r)) calc(var(--r) / -2), var(--g2) calc(var(--r) / 2) calc(sin(-60deg)* var(--r)), var(--g1) 0 calc(-1* var(--r)), var(--g2) calc(var(--r) / -2) calc(sin(-60deg)* var(--r)), var(--g1) calc(sin(-60deg)* var(--r)) calc(var(--r) / -2), var(--g2) calc(-1* var(--r)) 0, var(--g1) calc(sin(-60deg)* var(--r)) calc(var(--r) / 2);
+  background-size: 200%;
+}
+.lollipop2:after {
+   rotate: 180deg;
+}
+            .chocolatebar{
+            background-color: #40230b;
+            color: #542f10;
+            border-radius: 10px;
+            margin: auto;
+            display: grid;
+            grid-area: 2/1/2/3;
+            width:55vh;
+            height:20vh;
+            }
+            .chocolatesquare1{
+            background-color: #f2dbc7;
+            color: #542f10;
+            border-radius: 10px;
+            margin: auto;
+            display: grid;
+            grid-column-start: 2;
+            grid-row-start: 3;
+            width:20vh;
+            height:20vh;
+            }
+            .chocolatesquare2{
+            background-color: #634429;
+            color: #634429;
+            border-radius: 10px;
+            margin: auto;
+            display: grid;
+            grid-column-start: 3;
+            grid-row-start: 3;
+            width:20vh;
+            height:20vh;
+            }
+
+            .heart2 {
+              height: 20vh; /* adjust to control the size */
+              aspect-ratio: 1;
+              --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+              -webkit-mask-box-image: var(--_m);
+                         mask-border: var(--_m);
+              clip-path: polygon(-41% 0,50% 91%, 141% 0);
+              background-color: brown;
+              margin: auto;
+                grid-column-start: 1;
+                grid-row-start: 3;
+            }
+            /* fallback until better support for mask-border */
+            @supports not (-webkit-mask-box-image: var(--_m)) { 
+              .heart2 {
+                mask:
+                 radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+                 radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+                 conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+              }
+        </style>
+        <title>Chocolate box</title>
+    </head>
+    <body>
+        <h1>Here, I got you some chocolates &lt;3</h1>
+        <h2>Enjoy the counterfit M&amp;Ms</h2>
+        <div class="container">
+            <div class="heart" id="chocolateheart"></div>
+            <div class="lollipop"></div>
+            <div class="lollipop2"></div>
+            <div class="chocolatebar"></div>
+            <div class="heart2"></div>
+            <div class="chocolatesquare1"></div>
+            <div class="chocolatesquare2"></div>
+            <div class="lilbits">
+            
+                <div id="mnm1" class = "mnm">
+                m
+                </div>
+                <!-- TODO: Add some more divs here, and style them
+                    to fill in the 'lilbits' part of the chocolate box -->
+                    <div class="mnm" id="mnm2">
+                    m
+                    </div>
+                    <div class="mnm" id="mnm3">
+                    m
+                    </div>
+                    <div class="mnm" id="mnm4">
+                    m
+                    </div>
+                    <div class="mnm" id = "mnm5">
+                    m
+                    </div>
+                    <div class="mnm" id = "mnm6">
+                    m
+                    </div>
+                    <div class="mnm" id = "mnm7">
+                    m
+                    </div>
+                    <div class="mnm" id = "mnm8">
+                    m
+                    </div>
+                    <div class="mnm" id = "mnm9">
+                    m
+                    </div>
+            </div>
+            <!-- TODO: Add some more divs here, and style them
+                to fill in the other sections of the chocolate box -->
+        </div>
+    </body>
+</html> 
