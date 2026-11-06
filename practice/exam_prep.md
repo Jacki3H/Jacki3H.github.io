@@ -36,7 +36,7 @@
 | W4.8 |  |A for color C for font proporites| Incorporate color (color, background-color) and font properties (font-weight, font-size, font-family, font-style) for consistent website styling. |
 | W4.9 |  |A| Differentiate and apply the use of span and div for styling and layout. |
 | W4.10 | |A| Incorporate basic styling attributes to manipulate the appearance of containers (border, padding, margin). |
-| W5.1 | **Section 5: Accessibility, Best Practices, and Modern HTML** | | Explain the core principles of web accessibility and the importance of following WCAG guidelines. |
+| W5.1 | **Section 5: Accessibility, Best Practices, and Modern HTML** |D| Explain the core principles of web accessibility and the importance of following WCAG guidelines. |
 | W5.2 |  |E| Utilize ARIA roles (role), states, and properties (aria-expanded, aria-checked, aria-hidden) to make web content more accessible. |
 | W5.3 |  |B| Implement semantic markup and integrate modern HTML5 structural elements for document organization (header, nav, main, article, section, aside, footer). |
 | W5.4 |  |E| Apply microformats (hCard, vCard), microdata, and schema.org (itemprop, itemscope) for enriched content semantics. |
