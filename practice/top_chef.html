@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Page</title>
+  <title>Mount Everest Lemonade</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; }
-    img { display: block; width: 100%; background: #ddd; }
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    img { display: block; width: 100%; background: #ddeaf5; margin: 0px;}
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
     h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-    p { color: #555; line-height: 1.6; margin-bottom: 0.5rem; }
+    p {  line-height: 1.6; margin-bottom: 0.5rem; }
     /* Layout */
     body{
       background-color: lemonchiffon;
-      color:#70500c;
+      color: #61350a;
+    }
+    button{
+      background-color: #e2d10d;
+      border: none;
+      border-radius: 10px; 
+      /*10px because it doesn't need to change with different screnn sizes or settings*/
+      padding: 0.5rem;
+      /*0.5rem because it should adjust to be consistent with text size if user changes it */
+      display: flex;
+      justify-content: center;
     }
     .box{
       width: 100vw;
-      background-color: rgb(179, 246, 239);
-      padding: 10px;
+      /* Takes up the entire width of screen*/
+      background-color: #acfcff;
+      padding: 0.5rem;
       margin: 0px;
+      color: #130a61;
     }
     .c1 {
       padding: 1rem;
@@ -39,20 +51,29 @@
     }
     .banner {
       width: 100vw;
+      height: 80vh;
+      /*Takes up 80% of the height of the screen*/
       aspect-ratio: 8 / 3;
       padding: 0px;
       margin: 0px;
     }
-    .c5 {
+    .calltoactiongrid {
       display: grid;
       grid:
         'Lemonade CallToAction' auto
         / 1fr 1fr;
       padding: 1rem;
     }
-    .c6 {
+    .worldsbestlemonade {
       grid-area: Lemonade;
     }
+
+    .getlemonade {
+      grid-area: CallToAction;
+      display: flex;
+      justify-content: center;
+      width: 40%;
+    } 
     .c7 {
       grid-area: CallToAction;
     }
@@ -88,47 +109,136 @@
       padding: 0.5rem;
     }
     .button{ 
-      background-color: #e2d10d; 
+      background-color: #0da6e2; 
       border-radius: 10px;
       padding:10px;
     }
     .button:hover{
       background-color: yellow;
     }
+     .navigation_list{
+        list-style:none;
+        margin:0px;
+        padding:0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        text-decoration: none;
+        width: 100vw
+        }
+        .navigation_buttonbar{
+        list-style:none;
+        margin:0px;
+        padding:0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        text-decoration: none;
+        width: 35vw
+        }
+        .nav_button{
+         background-color: #0da6e2;
+          border-radius: 10px;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        #navbar{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 10px;
+          align-items: right;
+          width: 100vw;
+        }
+
+        .nav_button:hover{
+          background-color: yellow;
+        }
+        
+        .cards{
+          border-color: #e2d10d;
+          border-width: 2px;
+          border-style: solid;
+          margin: 2vw;
+          padding: auto;
+        }
+        .bottomgrid{
+          display: grid;
+          grid: 
+          "left right" 50vh
+          / 1fr 1fr;
+        }
+        
+        .leftgrid{
+          grid-area: left;
+        }
+        .rightgrid{
+          grid-area: right;
+        }
+   
   </style>
 </head>
 <body>
-<header class="c1">
-  <div class="c2">
-    <h1>Lemonade</h1>
-  </div>
+<header id = "navbar" class = "box">
+  <ul class="navigation_list">
+    <li style = "display: flex; justify-content: left;"><h1>Peak Lemonade</h1></li>
+    <div class = "navigation_buttonbar">
+    <li class = "nav_button" >Home</li> 
+    <li class = "nav_button">How to get there</li> 
+    <li class = "nav_button">More info</li>
+     <li class = "nav_button">Search?</li>
+    </div>
+    </ul>
 </header>
 <main class="c3">
   <img src="placeholder.jpg" alt="Mount everest" class="banner">
-  <div class="c5">
-    <div class = "box">
-    <h2 class="c6">World's best lemonade</h2>
-    <p>Drink lemonade on top of Mount Everest!</p> 
-    <p class ="button">Get Lemonade</p>
+    <div class = "calltoactiongrid box">
+      <div class = "worldsbestlemonade">
+        <h2>World's best lemonade</h2>
+        <p>Drink lemonade on top of Mount Everest!</p> 
+      </div>
+    <p class ="button getlemonade">Get Lemonade</p>
+    </div>
+  <div class="c8">
+    <div class="c9 cards">
+      <h3 style = "display: flex; justify-content: center;">Flavors</h3>
+      <ul></ul>
+        <li>Original</li>
+        <li>Strawberry</li>
+        <li>Hot Lemonade</li>
+      </ul>
+    </div>
+    <div class="c10 cards">
+      <h3 style = "display: flex; justify-content: center;">Price</h3>
+      <p>Our lemonade costs $1000 per cup due to the high production and trasportation costs.</p>
+    </div>
+    <div class="c11 cards">
+      <h3 style = "display: flex; justify-content: center;">Ingrediants</h3>
+      <ul>
+        <li>Lemon</li>
+        <li>Water</li>
+        <li>Sugar</li>
+        <li>Mount Everest Ice</li>
+      </ul>        
     </div>
   </div>
-  <div class="c8">
-    <div class="c9">
-      <h3>Flavors</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed</p>
+  <div class = "bottomgrid">
+    <div class = "leftgrid" style = "padding: 1rem;">
+      <h3 style = "display: flex; justify-content: center; padding: 1rem;">How does our lemonade not freeze?</h3>
+      <p>Our lemonade is made with patented technology so unfortunatly we can not reveal our secrets here.
+        you will just have to come to the top of Mount Everest and see for yourself!
+      </p>
     </div>
-    <div class="c10">
-      <h3>Price</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed</p>
-    </div>
-    <div class="c11">
-      <h3>Ingrediants</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed</p>
-    </div>
+    <div class = "rightgrid" style = "padding: 1rem;">
+      <img src = "placeholder.jpg" alt = "A glass of lemonade" style = "width: 100%; height: 100%;">
   </div>
 </main>
 <footer class="c12">
-
+<p style = "display: flex; justify-content: center;">Made by meeeeee</p>
 </footer>
   <script>
   (function() {
