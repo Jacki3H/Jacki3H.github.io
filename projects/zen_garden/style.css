@@ -1,0 +1,13 @@
+/*
+  ITD110 Zen Garden Project
+  Your name:
+  Your design concept (one sentence):
+
+  All of your CSS goes in this file.
+*/
+#disclaimer::before{
+content: "hello";
+display:block;
+border-radius:50%;
+background-color: lightblue;
+}
