@@ -1,13 +1,68 @@
 /*
   ITD110 Zen Garden Project
-  Your name:
-  Your design concept (one sentence):
+  Jackie Hedrick
+  My website is frog and plant themed.
 
   All of your CSS goes in this file.
-*/
+
 #disclaimer::before{
 content: "hello";
 display:block;
 border-radius:50%;
 background-color: lightblue;
 }
+*/
+
+.hide {
+    display: none;
+}
+
+#disclaimer{
+  background-color: red;
+  font-size: 1.5rem;
+}
+#utility-nav ul{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+#top-bar{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.menu-item a{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 5px;
+  background-color: #35f2d9;
+  border-radius: 5px;
+}
+.menu-item a:hover{
+  background-color: #f2e8cf;
+  color: #bc4749;
+}
+.submenu {
+    display: none;
+}
+
+.menu-item:hover .submenu,
+.menu-item:focus-within .submenu {
+  display: block;
+  text-decoration: none;
+  list-style-type: none;
+  position: absolute;
+  z-index: 1;
+  padding: 5px;
+}
+
+.menu{
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
